@@ -1,11 +1,12 @@
 package frc.robot.routines;
 
 import edu.wpi.first.wpilibj.XboxController;
+import frc.robot.Constants.*;
 
 public class Global {
 
-    public XboxController controller = new XboxController(0);
-    
+    public XboxController controller = new XboxController(IOConstants.CONTROLLER_PORT);
+
     public static void initialize() {
 
     }

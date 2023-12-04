@@ -2,6 +2,7 @@ package frc.robot;
 
 import edu.wpi.first.wpilibj.TimedRobot;
 import frc.robot.routines.*;
+import frc.robot.telemetry.*;
 
 public class RobotFrame extends TimedRobot {
 
@@ -13,6 +14,7 @@ public class RobotFrame extends TimedRobot {
 
     //Runs the robot init method
     Global.initialize();
+    SD_Display.setupDisplay();
   }
 
   ////Runs continuously when Robot is powered
@@ -22,6 +24,7 @@ public class RobotFrame extends TimedRobot {
 
     //Runs the robot periodic method
     Global.periodic();
+    SD_Display.display();
   }
 
   ////Runs once when Autonomous starts
