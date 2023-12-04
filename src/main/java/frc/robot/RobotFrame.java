@@ -4,62 +4,56 @@ import edu.wpi.first.wpilibj.TimedRobot;
 import frc.robot.routines.*;
 import frc.robot.telemetry.*;
 
+//#RobotFrame connects all of the routine classes to the TimedRobot interface
 public class RobotFrame extends TimedRobot {
 
-  
-  ////Runs once when Robot is powered on
+  ////Runs once when Robot is powered on ↓
 
   @Override
   public void robotInit() {
-
-    //Runs the robot init method
+    //runs robot initialization methods
     Global.initialize();
     SD_Display.setupDisplay();
   }
 
-  ////Runs continuously when Robot is powered
+  ////Runs continuously when Robot is powered ↓
 
   @Override
   public void robotPeriodic() {
-
-    //Runs the robot periodic method
+    //runs robot loop methods
     Global.periodic();
     SD_Display.display();
   }
 
-  ////Runs once when Autonomous starts
+  ////Runs once when Autonomous starts ↓
 
   @Override
   public void autonomousInit() {
-
-    //Runs the autonomous init method
+    //runs autonomous initialization methods
     Autonomous.initialize();
   }
 
-  ////Runs continuously when Autonomous is active
+  ////Runs continuously when Autonomous is active ↓
 
   @Override
   public void autonomousPeriodic() {
-
-    //Runs the autonomous periodic method
+    //runs autonomous loop methods
     Autonomous.periodic();
   }
 
-  ////Runs once when Teleop starts
+  ////Runs once when Teleop starts ↓
 
   @Override
   public void teleopInit() {
-
-    //Runs the teleop init method
+    //runs teleop initialization methods
     TeleOp.initialize();
   }
 
-  ////Runs continuously when Teleop is active
+  ////Runs continuously when Teleop is active ↓
 
   @Override
   public void teleopPeriodic() {
-
-    //Runs the teleop periodic method
+    //runs teleop loop methods
     TeleOp.periodic();
   }
 }
