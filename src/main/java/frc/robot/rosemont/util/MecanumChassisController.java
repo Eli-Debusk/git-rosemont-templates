@@ -21,7 +21,7 @@ public class MecanumChassisController {
         
         this.rightX = rx; //assigns the right-x-axis value to a givin rx value
 
-        this.chassisYaw = robotYaw; //The robot's yaw angle given by the IMU in radians
+        this.chassisYaw = robotYaw; //The robot's yaw angle given by the gyroscope in radians
     }
 
     public double[] getChassisSpeeds() {
