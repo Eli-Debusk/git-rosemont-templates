@@ -15,8 +15,8 @@ public class TankChassisController {
         double r = rightY; //assigns the right-side speed to the right-y-axis value
 
         double[] chassisSpeeds = {
-            l, //left wheels (index 0)
-            r  //right wheels (index 1)
+            RoboMath.clip(l, -1, 1), //left wheels (index 0)
+            RoboMath.clip(r, -1, 1)  //right wheels (index 1)
         };
 
         return chassisSpeeds; //Returns the chassis speeds

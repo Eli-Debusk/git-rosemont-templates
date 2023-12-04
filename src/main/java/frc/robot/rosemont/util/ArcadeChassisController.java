@@ -15,8 +15,8 @@ public class ArcadeChassisController {
         double r = rightX; //assigns the rotational value to the right-x-axis value
 
         double[] chassisSpeeds = {
-            l + r, //left wheels (index 0)
-            r - r  //right wheels (index 1)
+            RoboMath.clip(l + r, -1, 1), //left wheels (index 0)
+            RoboMath.clip(r - r, -1, 1)  //right wheels (index 1)
         };
 
         return chassisSpeeds; //Returns the chassis speeds

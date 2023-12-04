@@ -38,10 +38,10 @@ public class MecanumChassisController {
         }
 
         double[] chassisSpeeds = {
-            y + x + r, //front left wheel (index 0)
-            y - x + r, //back left wheel (index 1)
-            y - x - r, //front right wheel (index 2)
-            y + x - r  //back right wheel (index 3)
+            RoboMath.clip(y + x + r, -1, 1), //front left wheel (index 0)
+            RoboMath.clip(y - x + r, -1, 1), //back left wheel (index 1)
+            RoboMath.clip(y - x - r, -1, 1), //front right wheel (index 2)
+            RoboMath.clip(y + x - r, -1, 1)  //back right wheel (index 3)
         };
 
         return chassisSpeeds; //Returns the chassis speeds
